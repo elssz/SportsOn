@@ -24,7 +24,7 @@ const CategoriesSection = () => {
       <div className="grid grid-cols-6 gap-12 mt-8">
         {categoryList.map((category, index) => (
           <div
-            className="rounded-lg bg-gradient-to-r from-[#F1F1F1] w-full aspect-square flex justify-center"
+            className="rounded-lg bg-gray-800/3  w-full aspect-square flex justify-center"
             key={index}
           >
             <div className="self-center">

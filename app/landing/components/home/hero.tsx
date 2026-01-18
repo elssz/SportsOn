@@ -14,7 +14,7 @@ const HeroSection = () => {
           className="absolute grayscale left-0 -top-20"
         />
         <div className=" relative ml-40 self-center">
-          <div className="relative text-primary italic">Friday Sale, 50%</div>
+          <div className="relative text-primary italic w-40 bg-primary/15 p-2.5 text-center rounded-4xl">Friday Sale, 50%</div>
           <h1 className="font-extrabold italic text-[90px] leading-tigth bg-gradient-to-b from-black to-[#979797] bg-clip-text text-transparent">
             WEAR YOUR <br /> TOP-QUALITY <br /> SPORTSWEAR
           </h1>
