@@ -12,7 +12,7 @@ const Header = () => {
 
   // Daftar menu agar kode lebih bersih (DRY - Don't Repeat Yourself)
   const menus = [
-    { name: "Home", href: "#" },
+    { name: "Home", href: "/landing" },
     { name: "Category", href: "#" },
     { name: "Explore Products", href: "#" },
   ];
@@ -20,12 +20,14 @@ const Header = () => {
   return (
     <header>
       <div className="flex justify-between gap-10 container mx-auto py-7">
-        <Image
-          src="/images/logo.svg"
-          alt="SportOn Logo"
-          width={127}
-          height={30}
-        />
+        <Link href={"/landing"}>
+          <Image
+            src="/images/logo.svg"
+            alt="SportOn Logo"
+            width={127}
+            height={30}
+          />
+        </Link>
         {/* menu */}
         <nav className="flex gap-44 font-medium">
           {menus.map((menu) => (
