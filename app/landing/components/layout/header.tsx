@@ -53,11 +53,11 @@ const Header = () => {
         <div className="relative justify-center content-center items-center flex gap-10">
           <FiSearch size={24} />
           <button
-            className="relative cursor-pointer"
             onClick={() => setIsCartPopupOpen(!isCartPopupOpen)}
+            className={`p-2 relative cursor-pointer ${isCartPopupOpen ? "bg-primary/10 rounded-4xl" : " "}`}
           >
             <FiShoppingBag size={24} />
-            <div className="bg-primary rounded-full w-3.5 h-3.5 absolute z-10 -top-1 -right-1 text-[10px] text-white justify-center flex items-center">
+            <div className="bg-primary rounded-full w-3.5 h-3.5 absolute z-10 -top-1 right-0 text-[10px] text-white justify-center flex items-center">
               3
             </div>
           </button>

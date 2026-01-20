@@ -7,9 +7,15 @@ import {
 } from "react-icons/fi";
 import Button from "../ui/button";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const ProductActions = () => {
+  const {push} = useRouter();
   const [qty, setQty] = useState(1); //untuk menyimpan state yang bisa merubah di ui react. reactive programming
+
+  const checkout = () => {
+    
+  };
 
   return (
     <div className="flex gap-5">
@@ -35,8 +41,9 @@ const ProductActions = () => {
       <Button className="px-20 w-full">
         <FiShoppingBag className="mr-2 " size={24} /> Add to Cart
       </Button>
-      <Button variant="dark" className="px-20 w-full">
-        <FiArrowRight size={24} /> Checkout Now
+      <Button variant="dark" className="px-20 w-full" onClick={()=>push("/landing/checkout")}>
+        Checkout Now
+        <FiArrowRight size={24} />
       </Button>
     </div>
   );

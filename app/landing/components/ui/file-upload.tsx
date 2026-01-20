@@ -31,7 +31,7 @@ const FileUpload = ({ onFileSelect }: TFileUploadProps) => {
         e.preventDefault();
         handleFileChange(e.dataTransfer.files?.[0]);
       }}
-      className="flex flex-col justify-center items-center w-full py-6 border-dashed border-primary bg-primary/10 "
+      className="flex flex-col justify-center items-center w-full py-6 border border-dashed border-primary bg-primary/10 "
     >
       <input
         type="file"
@@ -41,8 +41,8 @@ const FileUpload = ({ onFileSelect }: TFileUploadProps) => {
         onChange={(e) => handleFileChange(e.target.files?.[0])} /// <reference path="" />
       />
       { !file ? (
-        <div className="text-center">
-          <FiUploadCloud className="text-primary mx-auto" />
+        <div className="text-center my-5">
+          <FiUploadCloud className="text-primary mx-auto mt-4" size={28} />
           <p className="text-xs">Upload Your payment Receipt here</p>
         </div>
       ) : (
@@ -52,8 +52,8 @@ const FileUpload = ({ onFileSelect }: TFileUploadProps) => {
           <p className="text-sm text-gray-400">
             {(file.size/1024).toFixed(1)}KB
           </p>
-          <button onClick={removeFile} >
-            <FiTrash size={14}/>Remove
+          <button onClick={removeFile} className="flex gap-2 bg-primary/90 text-white mx-auto rounded mt-4 px-2 font-[10px]">
+            <FiTrash size={14} className="self-center"/>Remove
           </button>
         </div>
       )}
