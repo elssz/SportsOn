@@ -15,7 +15,7 @@ const HeroSection = () => {
         />
         <div className=" relative ml-40 self-center">
           <div className="relative text-primary italic w-40 bg-primary/15 p-2.5 text-center rounded-4xl">Friday Sale, 50%</div>
-          <h1 className="font-extrabold italic text-[90px] leading-tigth bg-gradient-to-b from-black to-[#979797] bg-clip-text text-transparent">
+          <h1 className="font-extrabold italic text-[90px] leading-tigth bg-linear-to-b from-black to-[#979797] bg-clip-text text-transparent">
             WEAR YOUR <br /> TOP-QUALITY <br /> SPORTSWEAR
           </h1>
           <p className="w-1/2 mt-10 leading-loose">
@@ -51,7 +51,7 @@ const HeroSection = () => {
         width={200}
         height={200}
         alt="ornamet"
-        className="absolute -right-0 top-1/2 -translate-y-1/2"
+        className="absolute right-0 top-1/2 -translate-y-1/2"
       />
     </section>
   );

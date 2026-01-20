@@ -33,7 +33,7 @@ const CategoriesSection = () => {
                 width={86}
                 height={86}
                 alt={category.name}
-                className="mb-[10px]"
+                className="mb-2.5"
               />
               <div className="text-primary font-medium text-xl text-center">
                 {category.name}

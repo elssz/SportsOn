@@ -3,8 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { FiSearch, FiShoppingBag } from "react-icons/fi";
+import CartPopup from "../ui/cart-popup";
 
 const Header = () => {
+  const [isCartPopupOpen, setIsCartPopupOpen] = useState(false);
   // 1. Tambahkan state untuk melacak menu yang sedang aktif
   const [activeMenu, setActiveMenu] = useState("Home");
 
@@ -40,7 +42,7 @@ const Header = () => {
               {menu.name}
               {/* Garis Bawah: Muncul jika aktif ATAU saat di-hover */}
               <span
-                className={`absolute bottom-0 left-1/2 h-[3px] -translate-x-1/2 bg-primary transition-all duration-300 rounded-full ${
+                className={`absolute bottom-0 left-1/2 h-0.75 -translate-x-1/2 bg-primary transition-all duration-300 rounded-full ${
                   activeMenu === menu.name ? "w-1/2" : "w-0 group-hover:w-1/2"
                 }`}
               />
@@ -48,14 +50,18 @@ const Header = () => {
           ))}
         </nav>
 
-        <div className="flex gap-10">
+        <div className="relative justify-center content-center items-center flex gap-10">
           <FiSearch size={24} />
-          <div className="relative">
+          <button
+            className="relative cursor-pointer"
+            onClick={() => setIsCartPopupOpen(!isCartPopupOpen)}
+          >
             <FiShoppingBag size={24} />
-            <div className="bg-primary rounded-full w-3.5 h-3.5 absolute -top-1 -right-1 text-[10px] text-white justify-center flex items-center">
-              1
+            <div className="bg-primary rounded-full w-3.5 h-3.5 absolute z-10 -top-1 -right-1 text-[10px] text-white justify-center flex items-center">
+              3
             </div>
-          </div>
+          </button>
+          {isCartPopupOpen && <CartPopup />}
         </div>
       </div>
     </header>
